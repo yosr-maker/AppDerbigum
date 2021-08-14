@@ -1,0 +1,68 @@
+<div id="contact-page" class="container back">
+    <div class="bg">
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="contact-form">
+            <h2 class="title text-center">Update Event !</h2>
+            <div class="status alert alert-success" style="display: none"></div>
+            <form id="main-contact-form" class="contact-form row" name="contact-form" method="post">
+              <div class="row col-md-12">
+                <div class="form-group col-md-3">
+                </div>
+              <div class="form-group col-md-6">
+                <input type="text" [(ngModel)]="event.name" name="name" class="form-control" required="required" placeholder="name">
+              </div>
+              <div class="form-group col-md-4">
+                <input type="date" [(ngModel)]="event.date" name="date" class="form-control" required="required" placeholder="date">
+              </div>
+              </div>
+              <div class="form-group col-md-4">
+                <input type="number" [(ngModel)]="event.placesNbr" name="placenbr" class="form-control" required="required" placeholder="placenbr">
+              </div>
+              <div class="form-group col-md-5">
+              </div>
+              <div class="form-group col-md-4">
+                <input type="number" [(ngModel)]="event.ticketPrice" name="ticketprice" class="form-control" required="required" placeholder="ticketprice">
+              </div>
+              <div class="form-group col-md-2">
+                <span>dt</span>
+              </div>
+              <br><br>   <br><br> 
+              <div class="form-group col-lg-12 mx-auto">
+                <button (click)="updateEvent()"  class="btn btn-warning btn-lg"  style="margin-left: 200px;width: 150px;"> <i class="fa fa-hand-paper-o" aria-hidden="true"></i>
+                  <br> Update</button>
+                <button class="btn btn-secondary btn-lg" style="width: 150px;"routerLink="/user"> <i class="fas fa-undo"></i>
+                  <br> Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="contact-info">
+            <img src="../../assets/images/participate.png" alt="donate image" class="img-fluid mb-3 d-none d-md-block">
+            <h2 class="title text-center">Dont forget to follow us</h2>
+  
+            <div class="social-networks">
+              <h2 class="title text-center">Social Networking</h2>
+              <ul>
+                <li>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-google-plus"></i></a>
+                </li>
+                <li>s
+                  <a href="#"><i class="fa fa-youtube"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br><br><br><br><br><br><br>
+

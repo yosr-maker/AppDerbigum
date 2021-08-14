@@ -1,0 +1,37 @@
+<div class="product-detail">
+    <div class="container-fluid">
+        <div class="product-detail-top">
+            <div class="row align-items-center">
+                <div class="col-md-5">
+                    <div class="product-slider-single normal-slider">
+                        <img src="assets\images\SEAUX-DERBICOL-18kg-2020-1.png" alt="Product Image">
+                    
+                    </div>                            
+                </div>
+                <div class="col-md-7">
+                    <div class="product-content" *ngIf="product">
+                        <div class="title"><h2>Product ID: {{monProduct.id}}</h2></div>
+                        <div class="title"><h2>Product Name: {{monProduct.name}}</h2></div>
+                        <div class="price">
+                            <h4>Price:</h4>
+                            <p>{{monProduct.price}} dt<span></span></p>
+                        </div>
+                        <div class="ratting">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    
+                      
+                        <div class="action">
+                            <a class="btn" href="#"><i class="fa fa-shopping-cart"></i>Add to Cart</a>
+                            <a class="btn" href="#"><i class="fa fa-shopping-bag"></i>Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+</div>  

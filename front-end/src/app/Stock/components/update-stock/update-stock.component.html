@@ -1,0 +1,40 @@
+
+<div class="form-add-product container" >
+    <h2 class="text-center">Modifier un stock</h2>
+    <form #f="ngForm" (ngSubmit)="updateStock(f)">
+        <div class="row">
+            <div class="form-group col-lg-6">
+                <label for="nameCateg">Id</label>
+                <input value={{stockDetail.idStockDetail}} type="number" class="form-control" id="id" name="id" [ngModel]="stockDetail.idStockDetail">
+            </div>
+            <div class="form-group col-lg-6">
+                <label for="nameCateg">Name</label>
+                <input value={{stockDetail.name}} type="text" class="form-control" id="name" name="name" [ngModel]="stockDetail.name">
+            </div>
+        <div class="row">
+            <div class="form-group col-lg-4">
+                <label for="qte-min">Quantité minimale</label>
+                <input type="number" class="form-control" id="quantity" name="quantity" ngModel>
+            </div>
+            <div class="form-group col-lg-4">
+                <label for="qte-max">Quantité maximale</label>
+                <input type="number" class="form-control" id="qte-max" name="qtn-max" ngModel>
+            </div>
+            <div class="form-group col-lg-4">
+                <label for="qte-inst">Quantité instantanée</label>
+                <input type="number" class="form-control" id="qte-inst" name="qtn-inst" ngModel>
+            </div>
+            <div class="form-group col-lg-4">
+                <label for="qte-inst">Date de fabrication</label>
+                <input type="date" class="form-control" id="qte-inst" name="qtn-inst" ngModel>
+            </div>
+            <div class="form-group col-lg-4">
+                <label for="qte-inst">Date expiration</label>
+                <input type="date" class="form-control" id="qte-inst" name="qtn-inst" ngModel>
+            </div>
+        </div>
+        <div class="btn-add-product">
+            <button type="submit" class="btn btn-primary mr-3">Modifier</button>
+        </div>  
+
+</div>

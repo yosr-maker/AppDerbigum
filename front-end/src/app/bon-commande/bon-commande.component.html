@@ -1,0 +1,131 @@
+
+<div class="container">
+    
+        <div class="panel-heading">
+          <div class="card">
+        <h2 class="text-center">Bills List</h2>
+ 
+        
+        <div class="panel-body">
+           
+                  <table   class="table table-bordered"  valign="bottom">
+         
+                <thead  >
+               
+                    <th>Date</th>
+                    <th>LastName</th>
+                    <th>FirstName</th>
+                    <th>Prix Totale</th>
+                    <th>Type</th>
+                    <th>Action</th>
+                 
+                </thead>
+
+                
+               
+                    <tbody   *ngFor ="let bill of Bills">
+                       <tr *ngIf="bill.id== billId ||  billId==null ||bill.type==billT"   >
+                       
+                        <td>{{bill.date}}</td>
+                        <td>{{bill.firstName}}</td>
+                        <td>{{bill.lastName}}</td>
+                        <td>{{bill.prixtot}}</td>
+                        <td>{{bill.type}}</td>
+                        
+                        <td >
+                            
+                        <button class="btn btn-danger" (click)=" deletebill(bill.id)" >Delete</button>&nbsp;
+                        <button class="btn btn-info">Update</button>&nbsp; 
+                        
+                        </td>
+             
+                     
+                   
+                    </tr>
+                </tbody>
+            </table>
+
+            <form >
+              
+                <div class="form-group">
+                    <label>Search Order  </label>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>&nbsp;
+                    <input  name="id"  [(ngModel)]="searchValue" [(ngModel)]="billT"  >&nbsp;
+                   &nbsp; &nbsp;
+                     
+                       
+                </div>
+               
+                
+            </form>
+            
+            </div>
+   
+      
+     
+       
+        
+    
+
+  </div>
+ 
+<div [hidden]="submitted" style="width: 400px;"></div>
+  <fieldset>
+  
+    <form  #f="ngForm" (ngSubmit)="onSubmit()">
+      <label for="name">Type Of Bill</label>
+      <br/>
+      <select class="form-select"  aria-label="Default select example">
+        
+        <input type="text" class="form-control" id="type" required  [(ngModel)]="bill.type"name="type">
+        
+          <option selected >Choose</option>
+          <option value="Manual"  >Manual</option>
+         <option value="Automatic" >  Automatic</option>
+        
+       </select>
+      <!--   <ng-select [items]="Bill" bindLabel="name"     bindValue="id"  placeholder="Sélectionner le type" [(ngModel)]="typebill" (click)="selecttype()">
+        </ng-select>-->
+      <br/>
+        <form>
+        <label for="name">First Name</label>
+        <input type="text" class="form-control" id="firstName" required [(ngModel)]="bill.firstName" name="firstName"  ngModel required  #e="ngModel" pattern="[a-z]*">
+        <div *ngIf="e.invalid">
+          <div *ngIf="e.errors.required"><small class="text-danger">this field is required</small> </div>
+          <div *ngIf="e.errors.pattern"> <small class="text-danger">this field does not contain the numbers</small></div>
+      </div> </form>
+      <form>
+        
+        <label for="name">Last Name</label>
+        <input type="text" class="form-control" id="lastName" required [(ngModel)]="bill.lastName" name="lastName" ngModel required  #s="ngModel" pattern="[a-z]*">
+        <div *ngIf="s.invalid">
+          <div *ngIf="s.errors.required"><small class="text-danger">this field is required</small> </div>
+          <div *ngIf="s.errors.pattern"> <small class="text-danger">this field does not contain the numbers</small></div>
+      </div> </form>
+     
+      <form>
+        <label for="name">Date</label>
+        <input type="date" class="form-control" id="lastName" required [(ngModel)]="bill.date" name="lastName">
+      
+      </form>
+     <form>
+        <label for="name">Total Price</label>
+        <input type="number" class="form-control" aria-label="" id="lastName" required [(ngModel)]="bill.prixtot" name="lastName"ngModel required #n="ngModel"  pattern="[0-9]">
+        <div *ngIf="n.invalid">
+          <div *ngIf="n.errors.required"> <small class="text-danger">this field is required</small> </div>
+         </div></form>
+    
+      <button type="submit" class="btn btn-success"  > 
+        <span class="glyphicon glyphicon-send"></span>      
+      </button> 
+   
+
+    </form></fieldset>
+ 
+ 
+  <div [hidden]="!submitted">
+    <h4 >You submitted successfully!</h4>
+</div>
+</div></div>

@@ -1,0 +1,70 @@
+
+
+<nav class="navbar navbar-light bg-light">
+    <form class="form-inline">
+        <h2 class="text-center">Product List</h2>
+  
+    </form>
+
+
+  
+  </nav>
+
+
+<div class="container">
+    <div class="card">
+        
+        <div class="card-body">
+          
+
+            <label for="search" class="col-sm-2 col-form-label" style="text-align:left;">Search</label>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+              </svg>
+             &nbsp; &nbsp;
+            <div class="col-sm-6">
+</div>
+    <button type="button" class="btn btn-outline-success  btn-group-sm"  (click)="go()">+ Create Product</button>
+    <div>
+        <a class="btn close" href="/Products">&times;</a>
+      
+    </div>
+            <table class="table table-sm">
+                <thead class="table table-striped">
+                    <th scope="col">#</th>
+                   
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                   
+                    <th scope="col">Update</th>
+                    <th scope="col">Delete</th>
+                   
+                </thead>
+                <tbody>
+                      
+                    <tr *ngFor ="let product of products ">
+                        <td>{{product.id}}
+                            <img [src]=" 'data:image/jpeg;base64,' + product.image" style="width: 50px;"> 
+                    </td>
+                        <td>{{product.name}} </td>
+                        <td>{{product.price}}</td>
+                      
+                     
+                      
+                    <td>
+                        <button (click)="updateProduct(product.id)"class="btn btn-warning"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M11.013 1.427a1.75 1.75 0 012.474 0l1.086 1.086a1.75 1.75 0 010 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 01-.927-.928l.929-3.25a1.75 1.75 0 01.445-.758l8.61-8.61zm1.414 1.06a.25.25 0 00-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 000-.354l-1.086-1.086zM11.189 6.25L9.75 4.81l-6.286 6.287a.25.25 0 00-.064.108l-.558 1.953 1.953-.558a.249.249 0 00.108-.064l6.286-6.286z"></path></svg></button>
+                    </td>
+                    <td>
+                        <button (click)="deleteProduct(product.id)" class="btn btn-danger"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M3.404 12.596a6.5 6.5 0 119.192-9.192 6.5 6.5 0 01-9.192 9.192zM2.344 2.343a8 8 0 1011.313 11.314A8 8 0 002.343 2.343zM6.03 4.97a.75.75 0 00-1.06 1.06L6.94 8 4.97 9.97a.75.75 0 101.06 1.06L8 9.06l1.97 1.97a.75.75 0 101.06-1.06L9.06 8l1.97-1.97a.75.75 0 10-1.06-1.06L8 6.94 6.03 4.97z"></path></svg> </button>
+                    </td>
+                   
+                </tr>
+                   
+                </tbody>
+                <br>
+            </table>
+
+        </div>
+    </div>
+
+</div>

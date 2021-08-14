@@ -1,0 +1,27 @@
+<div class="logo"> <img src="assets\images\LOGOS-DERBIGUM-rect-500px-100px.png" height="100" width="400" ></div>
+<div class="login-page">
+
+		
+		<div class="form-content">
+		
+			<form role="form" class="bottom-75" ng-submit="submit()">
+			<div class="table-form">
+				<div class="form-groups">
+					<div class="form-group">
+						<input type="text" class="form-control input-lg" name="username"  placeholder="UserName" [(ngModel)]="username">UserName
+					</div>
+					<div class="form-group">
+						<input type="password" class="form-control input-lg"  name="password" placeholder="PASSWORD"  [(ngModel)]="password">Password
+					</div>
+					
+						
+				</div>	
+				<div class="button-container">
+					<button type="button" class="btn btn-outline-warning btn-lg" (click)=checkLogin() >Login</button>
+				</div>
+			</div>
+		
+		
+			</form>
+		</div>			
+</div>

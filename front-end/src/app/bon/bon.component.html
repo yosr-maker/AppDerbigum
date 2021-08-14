@@ -1,0 +1,43 @@
+<!-- Button to Open the Modal -->
+<button type="button" class="btn trigger" data-toggle="modal" data-target="#myModal" (click)="showModal=true" >
+    FEEDBACK 
+  </button>
+  
+  <!-- The Modal -->
+  <div class="modal" id="myModal" [ngClass]="{'show':showModal}">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">FEEDBACK</h4>
+          <button type="button" class="close"  (click)="showModal=false" data-dismiss="modal">&times;</button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body pl-5 mt-3" >
+            <div class="row">
+                <div class="col text-center">
+                    <h5 class="font-weight-bold">How satisfied are you with our Patform?</h5>
+                    <p class="text-muted ">Tell us about your experience</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-auto example-block text-center"><label class="radio-inline"> <input type="radio" name="emotion" id="sad" class="input-hidden" /><img src="https://img.icons8.com/color/100/000000/boring.png" width="84" height="84"></label></div>
+                <div class="col-auto example-block text-center"> <label class="radio-inline"> <input type="radio" name="emotion" id="happy" class="input-hidden" /> <img src="https://img.icons8.com/color/100/000000/bored.png" width="84" height="84"> </label> </div>
+                <div class="col-auto example-block text-center"> <label class="radio-inline"> <input type="radio" name="emotion" id="exicetd" class="input-hidden" /> <img src="https://img.icons8.com/color/100/000000/smiling.png " width="84" height="84"> </label> </div>
+            </div>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+        
+          <div class="custom-control custom-checkbox checkbox-lg space"><input type="checkbox" class="custom-control-input" id="checkbox-2">
+            <label class="custom-control-label" for="checkbox-2" (click)="showModal=false">Dont' show this again</label>
+         </div> 
+         <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>

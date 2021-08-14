@@ -1,0 +1,16 @@
+@import"~bootstrap/dist/css/bootstrap.css";
+.table{
+ background-color: black;
+}
+.td{
+    background-color: black;
+    width: min-content;
+    height: min-content;
+}
+.tr{
+    width: min-content;
+    height: min-content;
+}
+.img{
+    width: min-content;
+}

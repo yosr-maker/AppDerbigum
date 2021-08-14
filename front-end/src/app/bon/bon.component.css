@@ -1,0 +1,76 @@
+body {
+    font: 300 18px/1.5 'Rubik', sans-serif;
+    height: 100%;
+    position: relative;
+    overflow-x: hidden;
+    background-color: #BA68C8
+}
+
+.my-btn {
+    margin: 30%
+}
+
+.trigger {
+    background-color: rgb(187, 9, 9);
+    color: rgb(248, 240, 240);
+    float: right
+}
+.example-block {
+    transition: background 0.4s ease-out;
+    position: relative;
+    display: inline-block;
+    height: auto
+}
+
+.example-block:hover {
+    cursor: pointer;
+    animation: levitate 1s ease-in-out infinite
+}
+
+@keyframes levitate {
+    0% {
+        transform: translate(0, 0px)
+    }
+
+    50% {
+        transform: translate(0, -9px)
+    }
+
+    100% {
+        transform: translate(0, 0px)
+    }
+}
+
+.example-block .image {
+    transition: ease-in-out, transform 0.4s ease-in- out
+}
+
+.example-block:hover .image {
+    transform: scale(1.8)
+}
+
+.input-hidden {
+    position: absolute;
+    left: -9999px
+}
+
+input[type=radio]:checked+label>img {
+    animation: levitate 0.5s ease-in-out infinite;
+    transform: scale(2.0)
+}
+
+input[type=radio]+label>img {
+    transition: 500ms all
+}
+
+.modal-footer {
+    background-color: rgb(238, 238, 238)
+}
+
+@media (max-width: 400px) {
+    img {
+        width: auto;
+        height: auto;
+        margin-right: 50px
+    }
+}

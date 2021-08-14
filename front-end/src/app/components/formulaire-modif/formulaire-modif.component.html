@@ -1,0 +1,58 @@
+
+<div class="form-add-product container" >
+    <h2 class="text-center">Modifier un produit</h2>
+    <form #f="ngForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="form-group col-lg-6">
+                <label for="nameCateg">Id</label>
+                <input value={{monProduct.id}} type="text" class="form-control" id="id" name="id" [ngModel]="monProduct.id">
+            </div>
+            <div class="form-group col-lg-6">
+                <label for="nameCateg">Name</label>
+                <input value={{monProduct.name}} type="text" class="form-control" id="name" name="name" [ngModel]="monProduct.name">
+            </div>
+            <div class="form-group col-lg-6">
+                <label for="nameCateg">Price</label>
+                <input value={{monProduct.price}} type="text" class="form-control" id="price" name="price" [ngModel]="monProduct.price">
+            </div>
+            <div class="form-group col-lg-6">
+                <label for="categorie">Catégorie</label>
+                <input value={{monProduct.category}} type="text" class="form-control" id="category" name="category" [ngModel]="monProduct.category">
+            </div>
+            <div class="form-group col-lg-6">
+                <label for="nameCateg">image</label>
+                <input value={{monProduct.image}} type="text" class="form-control" id="image" name="image" [ngModel]="monProduct.image">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="category-desc">Description</label>
+            <textarea value={{monProduct.description}} name="description" id="description" class="form-control" cols="30" rows="10" [ngModel]="monProduct.description"></textarea>
+        </div>
+        <div class="row">
+            <div class="form-group col-lg-4">
+                <label for="qte-min">Quantité minimale</label>
+                <input value={{monProduct.quantity}} type="number" class="form-control" id="quantity" name="quantity" [ngModel]="monProduct.quantity">
+            </div>
+            <div class="form-group col-lg-4">
+                <label for="qte-max">Quantité maximale</label>
+                <input type="number" class="form-control" id="qte-max" name="qtn-max" ngModel>
+            </div>
+            <div class="form-group col-lg-4">
+                <label for="qte-inst">Quantité instantanée</label>
+                <input type="number" class="form-control" id="qte-inst" name="qtn-inst" ngModel>
+            </div>
+            <div class="form-group col-lg-4">
+                <label for="qte-inst">Date de fabrication</label>
+                <input type="date" class="form-control" id="qte-inst" name="qtn-inst" ngModel>
+            </div>
+            <div class="form-group col-lg-4">
+                <label for="qte-inst">Date expiration</label>
+                <input type="date" class="form-control" id="qte-inst" name="qtn-inst" ngModel>
+            </div>
+        </div>
+     
+        <div class="btn-add-product">
+            <button type="submit" class="btn btn-primary mr-3">Modifier</button>
+        </div>
+    
+</form>

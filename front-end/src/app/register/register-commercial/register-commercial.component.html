@@ -1,0 +1,43 @@
+
+<form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
+    <table>
+      <tr>
+        <td>Username</td>
+        <td><input name="username"  #name="ngModel" [(ngModel)]="userService.formData.username"></td>
+      </tr>
+  
+      <tr>
+        <td>Email</td>
+        <td><input name="email" [(ngModel)]="userService.formData.email"></td>
+      </tr>
+  
+      <tr>
+        <td>firstName</td>
+        <td><input name="firstName" [(ngModel)]="userService.formData.firstName"></td>
+      </tr>
+  
+      <tr>
+        <td>lastName</td>
+        <td><input name="lastName" [(ngModel)]="userService.formData.lastName"></td>
+      </tr>
+  
+      <tr>
+        <td>cin</td>
+        <td><input name="cin" [(ngModel)]="userService.formData.cin"></td>
+      </tr>
+  
+      <tr>
+        <td>phoneNumber</td>
+        <td><input name="phoneNumber" [(ngModel)]="userService.formData.phoneNumber"></td>
+      </tr>
+  
+      <tr>
+        <td>Password</td>
+        <td><input name="password" [(ngModel)]="userService.formData.password" type="password"></td>
+      </tr>
+    </table>
+  
+    <button type="submit" class="btn btn-success">Submit</button>
+  
+  </form>
+  

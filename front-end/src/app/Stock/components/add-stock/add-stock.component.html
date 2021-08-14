@@ -1,0 +1,40 @@
+<div class="form-add-product container">
+    <h2 class="text-center">Ajouter un stock</h2>
+    <form #formulaire="ngForm" (ngSubmit)="ajouterStock(formulaire)">
+        <div class="row">
+            <div class="form-group col-lg-6">
+                <label for="nameCateg">Name</label>
+                <input type="text" class="form-control" id="name" name="name" [(ngModel)]="stockDetail.name" #name="ngModel">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-lg-4">
+                <label for="qte-min">Quantité minimale</label>
+                <input type="number" class="form-control" id="qte-min" name="qtemin"  [(ngModel)]="stockDetail.quantiteMin" #Qm="ngModel">
+            </div>
+            <div class="form-group col-lg-4">
+                <label for="qte-max">Quantité maximale</label>
+                <input type="number" class="form-control" id="qte-max" name="qtemax" [(ngModel)]="stockDetail.quantiteMax" #QM="ngModel">
+            </div>
+            <div class="form-group col-lg-4">
+                <label for="qte-inst">Quantité instantanée</label>
+                <input type="number" class="form-control" id="qte-inst" name="qteinst" [(ngModel)]="stockDetail.quantiteInstan" #QI="ngModel" >
+            </div>
+            <div class="form-group col-lg-4">
+                <label for="qte-inst">Date de fabrication</label>
+                <input type="date" class="form-control" id="date-fab" name="datefab"  >
+            </div>
+            <div class="form-group col-lg-4">
+                <label for="qte-inst">Date expiration</label>
+                <input type="date" class="form-control" id="date-exp" name="dateexp"  >
+            </div>
+        </div>
+        <div>
+            <label for="image-categ">Image</label>
+            <input type="file" class="" id="img-categ" name="img-categ">
+        </div>
+        <div class="btn-add-stock">
+            <button type="submit" class="btn btn-primary mr-3">Ajouter</button>
+        </div>
+    
+</form>
